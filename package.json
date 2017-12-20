@@ -1,0 +1,36 @@
+{
+  "name": "react-node-sql-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "start-client.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon ./src/server.js",
+    "client": "node start-client.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamiecoe/react-node-sql-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamiecoe/react-node-sql-template/issues"
+  },
+  "homepage": "https://github.com/jamiecoe/react-node-sql-template#readme",
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "cookie": "^0.3.1",
+    "env2": "^2.2.0",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "nodemon": "^1.13.3",
+    "pg-promise": "^7.3.2",
+    "url": "^0.11.0"
+  }
+}
