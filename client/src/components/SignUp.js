@@ -2,13 +2,13 @@ import React from 'react';
 
 const SignUp = () => (
 
-    <form>
+    <form action="/signup" method="POST">
       <h2>Sign Up</h2>
-      <label for="name">Name</label>
+      <label>Name</label>
       <input type="text" id="name" />
-      <label for="username">Username</label>
+      <label>Username</label>
       <input type="text" id="username" />
-      <label for="password">Password</label>
+      <label>Password</label>
       <input type="password" id="password" />
       <input type="submit" value="Submit" />
     </form>

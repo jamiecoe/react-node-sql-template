@@ -1,0 +1,16 @@
+BEGIN;
+
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  username VARCHAR(100) NOT NULL UNIQUE,
+  password VARCHAR(100) NOT NULL,
+  DateCreated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+
+INSERT INTO users (name, username, password) VALUES ('Jamie', 'jc66', '$2a$10$f9bHlm5g5AEg6cg/gcTMm.HTVYd9m2Kg2yPLpR9.JvWi8RFTOJm.i');
+
+COMMIT;
