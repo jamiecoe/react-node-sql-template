@@ -1,13 +1,15 @@
 import React from 'react';
 import SignUp from './SignUp';
 import Login from './Login';
+import { Link } from 'react-router-dom';
 
 const Home = (props) => {
 
   return (
     <div>
-      <SignUp signIn={props.signIn} history={props.history}/>
-      <Login signIn={props.signIn}/>
+      <Link to="/welcome">Welcome page</Link>
+      <SignUp history={props.history}/>
+      <Login />
     </div>
   )
 }

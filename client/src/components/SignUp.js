@@ -22,8 +22,7 @@ class SignUp extends React.Component {
       body: JSON.stringify(data),
     })
     .then((res) => {
-      if(res.status === 200) {
-        this.props.signIn();
+      if(res.status === 200) {        
         this.props.history.push('/welcome');
       }
     })

@@ -20,7 +20,7 @@ router.post('/signup', (req, res) => {
     .then((hashPassword) => addNewUser(name, username, hashPassword))
     .then((resdata) => {
       const { username } = resdata[0];
-      req.session.user = username;      
+      req.session.user = username;
       res.send();
     })
     .catch((err) => {
@@ -34,6 +34,15 @@ router.post('/login', (req, res) => {
 
 router.get('/authenticate', (req, res) => {
   console.log(req.session);
+  if(req.session.user) {
+    console.log('User has cookie!');
+    res.status(200).send();
+
+  } else {
+    console.log('User needs to log-in');
+    res.status(401).send();
+  }
+
 });
 
 module.exports = router;
